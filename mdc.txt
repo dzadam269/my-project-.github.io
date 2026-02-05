@@ -1,0 +1,219 @@
+* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  background:#0b0b0b;
+  color:white;
+}
+
+/* ================= HEADER ================= */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  background:#111;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.logo{
+  color:#00ffcc;
+  font-weight:bold;
+  font-size:24px;
+}
+
+nav a{
+  color:white;
+  margin-left:30px;
+  text-decoration:none;
+  font-size:16px;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#00ffcc;
+}
+
+/* ================= HERO ================= */
+.hero{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 60px;
+}
+
+.content{
+  max-width:500px;
+}
+
+.content h1{
+  font-size:48px;
+  line-height:1.2;
+}
+
+.content h1 span{
+  color:#00ffcc;
+}
+
+.content h3{
+  color:#00ffcc;
+  margin:10px 0;
+}
+
+.content p{
+  margin:20px 0;
+  line-height:1.6;
+  color:#ccc;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 30px;
+  background:#00ffcc;
+  color:black;
+  text-decoration:none;
+  border-radius:25px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#00e6b8;
+  transform:translateY(-3px);
+}
+
+/* ================= PROFILE IMAGE ================= */
+.image-box{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#0b0b0b;
+  box-shadow:
+    0 0 30px #00ffcc,
+    0 0 60px rgba(0,255,204,0.4);
+  animation: glow 3s infinite;
+}
+
+.image-box img{
+  width:92%;
+  height:92%;
+  object-fit:cover;
+  border-radius:50%;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px #00ffcc; }
+  50% { box-shadow: 0 0 50px #00ffcc; }
+  100% { box-shadow: 0 0 20px #00ffcc; }
+}
+
+/* ================= SOCIAL ICONS ================= */
+.socials{
+  display:flex;
+  gap:15px;
+  margin-top:25px;
+}
+
+.socials a{
+  width:45px;
+  height:45px;
+  background:#111;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s;
+  box-shadow:0 0 10px rgba(0,255,204,0.3);
+}
+
+.socials a img{
+  width:22px;
+  filter:invert(1);
+}
+
+.socials a:hover{
+  background:#00ffcc;
+  transform:translateY(-5px);
+  box-shadow:0 0 20px #00ffcc;
+}
+
+.socials a:hover img{
+  filter:invert(0);
+}
+
+/* ================= SECTIONS ================= */
+.section{
+  padding:80px 60px;
+  text-align:center;
+}
+
+.projects{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+
+.project-card{
+  background:#111;
+  padding:20px;
+  border-radius:15px;
+  width:250px;
+  transition:0.3s;
+}
+
+.project-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 20px #00ffcc;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:400px;
+  margin:20px auto 0;
+}
+
+form input, form textarea{
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  outline:none;
+}
+
+form button{
+  padding:12px;
+  border-radius:25px;
+  border:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width:900px){
+  .hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    gap:40px;
+  }
+
+  .image-box{
+    margin-bottom:30px;
+  }
+
+  .projects{
+    flex-direction:column;
+    align-items:center;
+  }
+}
